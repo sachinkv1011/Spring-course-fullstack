@@ -6,17 +6,30 @@ import { AppComponent } from './app.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { FormsModule } from '@angular/forms';
 import { ViewCourseComponent } from './view-course/view-course.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myRoute:Routes=[
+  {
+    path:"", component:ViewCourseComponent
+  },
+  {
+    path:"addcourse", component:AddCourseComponent
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCourseComponent,
-    ViewCourseComponent
+    ViewCourseComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
