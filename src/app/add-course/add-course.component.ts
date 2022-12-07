@@ -36,6 +36,11 @@ export class AddCourseComponent {
         
     }
     )
+    this.courseTitle,
+      this.courseDescription,
+      this.courseVenue,
+      this.courseDuration,
+      this.courseDate
   }
 }
 
