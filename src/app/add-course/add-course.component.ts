@@ -16,22 +16,23 @@ export class AddCourseComponent {
 
   constructor(private api:ApiService){}
  
-  course:any={}
-  readValue(){
-    this.course={
-      "title":this.courseTitle,
-      "description":this.courseDescription,
-      "venue":this.courseVenue,
-      "duration":this.courseDuration,
-      "date":this.courseDate
+  
+  readValue=()=>{
+    let course:any={
+      "courseTitle":this.courseTitle,
+      "courseDescription":this.courseDescription,
+      "courseVenue":this.courseVenue,
+      "courseDuration":this.courseDuration,
+      "courseDate":this.courseDate
 
      
     }
 
-    console.log(this.course)
-    this.api.addCourse(this.course).subscribe(
+    console.log(course)
+    this.api.addCourse(course).subscribe(
       (response)=>{
         console.log(response)
+        
         
     }
     )
